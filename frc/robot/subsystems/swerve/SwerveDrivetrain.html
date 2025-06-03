@@ -35,7 +35,6 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
-<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -77,12 +76,12 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>edu.wpi.first.wpilibj2.command.Subsystem</code>, <code><a href="../Drivetrain.html" title="interface in frc.robot.subsystems">Drivetrain</a></code></dd>
+<dd><code>edu.wpi.first.wpilibj2.command.Subsystem</code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">SwerveDrivetrain</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="../Drivetrain.html" title="interface in frc.robot.subsystems">Drivetrain</a></span></div>
+implements edu.wpi.first.wpilibj2.command.Subsystem</span></div>
 <div class="block">The swerve drivetrain subsystem</div>
 </section>
 <section class="summary">
@@ -120,9 +119,7 @@ implements <a href="../Drivetrain.html" title="interface in frc.robot.subsystems
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVisionUpdate(edu.wpi.first.math.geometry.Pose2d,edu.wpi.first.math.Vector,double)" class="member-name-link">addVisionUpdate</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;newPose,
  edu.wpi.first.math.Vector&lt;edu.wpi.first.math.numbers.N3&gt;&nbsp;stdDevs,
  double&nbsp;timestamp)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Adds a vision update to the pose estimator</div>
-</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#followTrajectory(choreo.trajectory.SwerveSample)" class="member-name-link">followTrajectory</a><wbr>(choreo.trajectory.SwerveSample&nbsp;sample)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -131,41 +128,28 @@ implements <a href="../Drivetrain.html" title="interface in frc.robot.subsystems
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.geometry.Pose2d</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition()" class="member-name-link">getPosition</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the position from the pose estimator</div>
-</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>edu.wpi.first.math.kinematics.ChassisSpeeds</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVelocity()" class="member-name-link">getVelocity</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Gets the velocity according to the wheels (includes slip error)</div>
-</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#humanDrive(edu.wpi.first.math.kinematics.ChassisSpeeds)" class="member-name-link">humanDrive</a><wbr>(edu.wpi.first.math.kinematics.ChassisSpeeds&nbsp;cmd)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Commands a <code>ChassisSpeeds</code> to the drivetrain</div>
-</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lockWheels()" class="member-name-link">lockWheels</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Locks the wheels.</div>
-</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#periodic()" class="member-name-link">periodic</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">setPosition</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;pos)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sets the position of the pose estimator</div>
-</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-frc.robot.subsystems.Drivetrain">Methods inherited from interface&nbsp;frc.robot.subsystems.<a href="../Drivetrain.html" title="interface in frc.robot.subsystems">Drivetrain</a></h3>
-<code><a href="../Drivetrain.html#getAcceleration()">getAcceleration</a>, <a href="../Drivetrain.html#getGyro()">getGyro</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-edu.wpi.first.wpilibj2.command.Subsystem">Methods inherited from interface&nbsp;edu.wpi.first.wpilibj2.command.Subsystem</h3>
 <code>defer, getCurrentCommand, getDefaultCommand, getName, register, removeDefaultCommand, run, runEnd, runOnce, setDefaultCommand, simulationPeriodic, startEnd, startRun</code></div>
@@ -219,28 +203,12 @@ implements <a href="../Drivetrain.html" title="interface in frc.robot.subsystems
 <section class="detail" id="getPosition()">
 <h3>getPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.geometry.Pose2d</span>&nbsp;<span class="element-name">getPosition</span>()</div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../Drivetrain.html#getPosition()">Drivetrain</a></code></span></div>
-<div class="block">Gets the position from the pose estimator</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../Drivetrain.html#getPosition()">getPosition</a></code>&nbsp;in interface&nbsp;<code><a href="../Drivetrain.html" title="interface in frc.robot.subsystems">Drivetrain</a></code></dd>
-<dt>Returns:</dt>
-<dd>The position from the pose estimator</dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="setPosition(edu.wpi.first.math.geometry.Pose2d)">
 <h3>setPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d&nbsp;pos)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../Drivetrain.html#setPosition(edu.wpi.first.math.geometry.Pose2d)">Drivetrain</a></code></span></div>
-<div class="block">Sets the position of the pose estimator</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../Drivetrain.html#setPosition(edu.wpi.first.math.geometry.Pose2d)">setPosition</a></code>&nbsp;in interface&nbsp;<code><a href="../Drivetrain.html" title="interface in frc.robot.subsystems">Drivetrain</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>pos</code> - The new pose to use</dd>
-</dl>
 </section>
 </li>
 <li>
@@ -249,76 +217,36 @@ implements <a href="../Drivetrain.html" title="interface in frc.robot.subsystems
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addVisionUpdate</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d&nbsp;newPose,
  edu.wpi.first.math.Vector&lt;edu.wpi.first.math.numbers.N3&gt;&nbsp;stdDevs,
  double&nbsp;timestamp)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../Drivetrain.html#addVisionUpdate(edu.wpi.first.math.geometry.Pose2d,edu.wpi.first.math.Vector,double)">Drivetrain</a></code></span></div>
-<div class="block">Adds a vision update to the pose estimator</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../Drivetrain.html#addVisionUpdate(edu.wpi.first.math.geometry.Pose2d,edu.wpi.first.math.Vector,double)">addVisionUpdate</a></code>&nbsp;in interface&nbsp;<code><a href="../Drivetrain.html" title="interface in frc.robot.subsystems">Drivetrain</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>newPose</code> - The estimated pose</dd>
-<dd><code>stdDevs</code> - The measurement error standard deviations [x, y, theta] [meters,meters,radians]</dd>
-<dd><code>timestamp</code> - The time at which the pose was detected</dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="humanDrive(edu.wpi.first.math.kinematics.ChassisSpeeds)">
 <h3>humanDrive</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">humanDrive</span><wbr><span class="parameters">(edu.wpi.first.math.kinematics.ChassisSpeeds&nbsp;cmd)</span></div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../Drivetrain.html#humanDrive(edu.wpi.first.math.kinematics.ChassisSpeeds)">Drivetrain</a></code></span></div>
-<div class="block">Commands a <code>ChassisSpeeds</code> to the drivetrain</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../Drivetrain.html#humanDrive(edu.wpi.first.math.kinematics.ChassisSpeeds)">humanDrive</a></code>&nbsp;in interface&nbsp;<code><a href="../Drivetrain.html" title="interface in frc.robot.subsystems">Drivetrain</a></code></dd>
-<dt>Parameters:</dt>
-<dd><code>cmd</code> - The commanded speeds</dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="lockWheels()">
 <h3>lockWheels</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">lockWheels</span>()</div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../Drivetrain.html#lockWheels()">Drivetrain</a></code></span></div>
-<div class="block">Locks the wheels. In mecanum, this does nothing.</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../Drivetrain.html#lockWheels()">lockWheels</a></code>&nbsp;in interface&nbsp;<code><a href="../Drivetrain.html" title="interface in frc.robot.subsystems">Drivetrain</a></code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getVelocity()">
 <h3>getVelocity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">edu.wpi.first.math.kinematics.ChassisSpeeds</span>&nbsp;<span class="element-name">getVelocity</span>()</div>
-<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="../Drivetrain.html#getVelocity()">Drivetrain</a></code></span></div>
-<div class="block">Gets the velocity according to the wheels (includes slip error)</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../Drivetrain.html#getVelocity()">getVelocity</a></code>&nbsp;in interface&nbsp;<code><a href="../Drivetrain.html" title="interface in frc.robot.subsystems">Drivetrain</a></code></dd>
-<dt>Returns:</dt>
-<dd>The velocity</dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getPE()">
 <h3>getPE</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../utils/PoseEstimator.html" title="class in frc.robot.utils">PoseEstimator</a></span>&nbsp;<span class="element-name">getPE</span>()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../Drivetrain.html#getPE()">getPE</a></code>&nbsp;in interface&nbsp;<code><a href="../Drivetrain.html" title="interface in frc.robot.subsystems">Drivetrain</a></code></dd>
-</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="followTrajectory(choreo.trajectory.SwerveSample)">
 <h3>followTrajectory</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">followTrajectory</span><wbr><span class="parameters">(choreo.trajectory.SwerveSample&nbsp;sample)</span></div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code><a href="../Drivetrain.html#followTrajectory(choreo.trajectory.SwerveSample)">followTrajectory</a></code>&nbsp;in interface&nbsp;<code><a href="../Drivetrain.html" title="interface in frc.robot.subsystems">Drivetrain</a></code></dd>
-</dl>
 </section>
 </li>
 </ul>

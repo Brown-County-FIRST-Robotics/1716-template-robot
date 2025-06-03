@@ -4,7 +4,6 @@ frc.robot.subsystems
 frc.robot.subsystems.climber
 frc.robot.subsystems.gripper
 frc.robot.subsystems.manipulator
-frc.robot.subsystems.mecanum
 frc.robot.subsystems.swerve
 frc.robot.subsystems.vision
 frc.robot.utils
