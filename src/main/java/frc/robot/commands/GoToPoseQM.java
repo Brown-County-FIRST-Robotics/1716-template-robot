@@ -6,7 +6,7 @@ import edu.wpi.first.math.geometry.*;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
 import edu.wpi.first.math.trajectory.TrapezoidProfile;
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.swerve.SwerveDrivetrain;
 import java.util.function.DoubleSupplier;
 import java.util.function.Supplier;
 import org.littletonrobotics.junction.Logger;
@@ -16,11 +16,11 @@ public class GoToPoseQM extends Command {
       new ProfiledPIDController(0.7, 0.01, 0.0, new TrapezoidProfile.Constraints(1.0, 3.0), 0.02);
   private final ProfiledPIDController thetaController =
       new ProfiledPIDController(0.7, 0.01, 0.0, new TrapezoidProfile.Constraints(1.0, 3.0), 0.02);
-  final Drivetrain drivetrain;
+  final SwerveDrivetrain drivetrain;
   final Supplier<Pose2d> targeter;
   Pose2d target;
 
-  public GoToPoseQM(Drivetrain drivetrain, Supplier<Pose2d> targeter) {
+  public GoToPoseQM(SwerveDrivetrain drivetrain, Supplier<Pose2d> targeter) {
     this.drivetrain = drivetrain;
     this.targeter = targeter;
     addRequirements(drivetrain);

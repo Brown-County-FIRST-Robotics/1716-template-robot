@@ -6,12 +6,13 @@ import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.geometry.*;
 import edu.wpi.first.math.kinematics.*;
 import edu.wpi.first.math.numbers.N3;
+import edu.wpi.first.wpilibj2.command.Subsystem;
 import frc.robot.subsystems.*;
 import frc.robot.utils.PoseEstimator;
 import org.littletonrobotics.junction.Logger;
 
 /** The swerve drivetrain subsystem */
-public class SwerveDrivetrain implements Drivetrain {
+public class SwerveDrivetrain implements Subsystem {
   private static final double WHEEL_SPACING = 21 * 0.0254;
   private static final SwerveDriveKinematics KINEMATICS =
       new SwerveDriveKinematics(
@@ -64,7 +65,6 @@ public class SwerveDrivetrain implements Drivetrain {
     };
   }
 
-  @Override
   public Pose2d getPosition() {
     return poseEstimator.getPose();
   }
@@ -78,21 +78,17 @@ public class SwerveDrivetrain implements Drivetrain {
     br.setState(states[3]);
   }
 
-  @Override
   public void setPosition(Pose2d pos) {
     poseEstimator.setPose(pos);
   }
 
-  @Override
   public void addVisionUpdate(Pose2d newPose, Vector<N3> stdDevs, double timestamp) {}
 
-  @Override
   public void humanDrive(ChassisSpeeds cmd) {
     SwerveModuleState[] states = KINEMATICS.toSwerveModuleStates(cmd);
     setModuleStates(states);
   }
 
-  @Override
   public void lockWheels() {
     setModuleStates(
         new SwerveModuleState[] {
@@ -103,12 +99,10 @@ public class SwerveDrivetrain implements Drivetrain {
         });
   }
 
-  @Override
   public ChassisSpeeds getVelocity() {
     return KINEMATICS.toChassisSpeeds(getWheelSpeeds());
   }
 
-  @Override
   public PoseEstimator getPE() {
     return poseEstimator;
   }
@@ -117,7 +111,6 @@ public class SwerveDrivetrain implements Drivetrain {
   PIDController yPid = new PIDController(1.0, 0.0, 0.0);
   PIDController thPid = new PIDController(1.0, 0.0, 0.0);
 
-  @Override
   public void followTrajectory(SwerveSample sample) {
     humanDrive(
         new ChassisSpeeds(

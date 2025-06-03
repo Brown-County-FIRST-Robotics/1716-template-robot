@@ -2,7 +2,7 @@ package frc.robot.subsystems.vision;
 
 import edu.wpi.first.math.VecBuilder;
 import edu.wpi.first.math.geometry.*;
-import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.swerve.SwerveDrivetrain;
 import frc.robot.utils.*;
 import java.util.Optional;
 import org.littletonrobotics.junction.Logger;
@@ -11,7 +11,7 @@ import org.littletonrobotics.junction.Logger;
 public class FusedVision extends PeriodicRunnable {
   final VisionIO io;
   public final VisionIO.VisionIOInputs inputs = new VisionIO.VisionIOInputs();
-  final Drivetrain drivetrain;
+  final SwerveDrivetrain drivetrain;
 
   final VisionSLAMIO slamio;
   final VisionSLAMIOInputsAutoLogged slamInputs = new VisionSLAMIOInputsAutoLogged();
@@ -26,7 +26,7 @@ public class FusedVision extends PeriodicRunnable {
   }
 
   public FusedVision(
-      Drivetrain drivetrain, Transform3d slamPose, VisionSLAMIO slamio, VisionIO visionIO) {
+      SwerveDrivetrain drivetrain, Transform3d slamPose, VisionSLAMIO slamio, VisionIO visionIO) {
     this.drivetrain = drivetrain;
     this.slamPose = slamPose;
     this.slamio = slamio;

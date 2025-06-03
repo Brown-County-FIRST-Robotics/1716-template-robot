@@ -7,9 +7,8 @@ import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.Constants;
-import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.swerve.SwerveDrivetrain;
 import frc.robot.utils.DualRateLimiter;
-import frc.robot.utils.Overrides;
 import frc.robot.utils.Vector;
 import frc.robot.utils.buttonbox.OverridePanel;
 import java.util.Optional;
@@ -17,7 +16,7 @@ import org.littletonrobotics.junction.Logger;
 
 /** A command for manual control */
 public class TeleopDrive extends Command {
-  private final Drivetrain drivetrain;
+  private final SwerveDrivetrain drivetrain;
   private final CommandXboxController controller;
   private final Optional<CommandXboxController> secondController;
   private final OverridePanel overridePanel;
@@ -54,7 +53,7 @@ public class TeleopDrive extends Command {
   Vector previousCommand = Vector.zeroVector();
 
   public TeleopDrive(
-      Drivetrain drivetrain, CommandXboxController controller, OverridePanel overridePanel_) {
+      SwerveDrivetrain drivetrain, CommandXboxController controller, OverridePanel overridePanel_) {
     this.drivetrain = drivetrain;
     this.controller = controller;
     this.secondController = Optional.empty();
@@ -188,7 +187,7 @@ public class TeleopDrive extends Command {
           new Pose2d(drivetrain.getPosition().getTranslation(), Rotation2d.fromRotations(0.5)));
     }
 
-    doFieldOriented = Overrides.useFieldOriented.get();
+    doFieldOriented = true; // TODO: Fix
     locked = controller.getHID().getXButtonPressed() || locked;
     if (locked) {
       drivetrain.lockWheels();

@@ -5,10 +5,10 @@ import edu.wpi.first.wpilibj.util.Color;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 import frc.robot.FieldConstants;
-import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.LEDs;
 import frc.robot.subsystems.gripper.Gripper;
 import frc.robot.subsystems.manipulator.Manipulator;
+import frc.robot.subsystems.swerve.SwerveDrivetrain;
 import frc.robot.utils.LoggedTunableNumber;
 import frc.robot.utils.buttonbox.ManipulatorPanel;
 import java.util.Optional;
@@ -17,7 +17,7 @@ public class ManipulatorPresetFactory {
   final Manipulator manipulator;
   final Gripper gripper;
   final TeleopDrive teleopDrive;
-  final Drivetrain driveTrain;
+  final SwerveDrivetrain driveTrain;
   final ManipulatorPanel manipulatorPanel;
   final LEDs leds;
 
@@ -44,7 +44,7 @@ public class ManipulatorPresetFactory {
       Manipulator manipulator_,
       Gripper gripper_,
       TeleopDrive teleopDrive_,
-      Drivetrain driveTrain_,
+      SwerveDrivetrain driveTrain_,
       ManipulatorPanel manipulatorPanel_,
       LEDs leds_) {
     manipulator = manipulator_;

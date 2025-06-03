@@ -20,10 +20,6 @@ import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import frc.robot.commands.GoToPoseQM;
 import frc.robot.commands.ManipulatorPresetFactory;
 import frc.robot.commands.TeleopDrive;
-import frc.robot.subsystems.Drivetrain;
-import frc.robot.subsystems.IMUIO;
-import frc.robot.subsystems.IMUIONavx;
-import frc.robot.subsystems.IMUIOPigeon;
 import frc.robot.subsystems.LEDs;
 import frc.robot.subsystems.climber.Climber;
 import frc.robot.subsystems.climber.ClimberIO;
@@ -32,9 +28,6 @@ import frc.robot.subsystems.gripper.Gripper;
 import frc.robot.subsystems.gripper.GripperIO;
 import frc.robot.subsystems.gripper.GripperIOSparkMax;
 import frc.robot.subsystems.manipulator.*;
-import frc.robot.subsystems.mecanum.MecanumDrivetrain;
-import frc.robot.subsystems.mecanum.MecanumIO;
-import frc.robot.subsystems.mecanum.MecanumIOSpark;
 import frc.robot.subsystems.swerve.Module;
 import frc.robot.subsystems.swerve.ModuleIO;
 import frc.robot.subsystems.swerve.ModuleIOSim;
@@ -52,7 +45,7 @@ public class RobotContainer {
   private final ButtonBox buttonBox = new ButtonBox(2);
   private final ManipulatorPanel manipulatorPanel = new ManipulatorPanel(buttonBox);
   private final OverridePanel overridePanel = new OverridePanel(buttonBox);
-  private final Drivetrain driveSys;
+  private final SwerveDrivetrain driveSys;
   private final LoggedDashboardChooser<Command> autoChooser;
   private final Manipulator manipulator;
   private final Gripper gripper;
@@ -68,9 +61,6 @@ public class RobotContainer {
     autoChooser = new LoggedDashboardChooser<>("Auto chooser");
     if (WhoAmI.mode != WhoAmI.Mode.REPLAY) {
       switch (WhoAmI.bot) {
-        case MECHBASE:
-          driveSys = new MecanumDrivetrain(new MecanumIOSpark(1, 2, 3, 4), new IMUIOPigeon(20));
-          break;
         case SIMSWERVEBASE:
           driveSys =
               new SwerveDrivetrain(
@@ -101,7 +91,12 @@ public class RobotContainer {
 
           break;
         default:
-          driveSys = new MecanumDrivetrain(new MecanumIOSpark(1, 2, 3, 4), new IMUIONavx());
+          driveSys =
+              new SwerveDrivetrain(
+                  new Module(new ModuleIOSim(0), 0),
+                  new Module(new ModuleIOSim(1), 1),
+                  new Module(new ModuleIOSim(2), 2),
+                  new Module(new ModuleIOSim(3), 3));
       }
       for (var appendage : WhoAmI.appendages) {
         if (appendage == WhoAmI.Appendages.GRIPPER) {
@@ -145,7 +140,12 @@ public class RobotContainer {
                   new VisionIO() {});
           break;
         default:
-          driveSys = new MecanumDrivetrain(new MecanumIO() {}, new IMUIO() {});
+          driveSys =
+              new SwerveDrivetrain(
+                  new Module(new ModuleIO() {}, 0),
+                  new Module(new ModuleIO() {}, 1),
+                  new Module(new ModuleIO() {}, 2),
+                  new Module(new ModuleIO() {}, 3));
       }
     }
 

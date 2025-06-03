@@ -17,9 +17,6 @@ public final class WhoAmI {
 
   /** The robot types */
   public enum RobotType {
-    /** he mecanum robot */
-    @Deprecated(forRemoval = true, since = "20250501")
-    MECHBASE,
     /** A simulated swerve robot */
     SIMSWERVEBASE,
     /** The swerve robot */
